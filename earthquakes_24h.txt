@@ -10,6 +10,10 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 63.3580,-151.7410
+  Icon: 0,0,000,2,1,"Magnitude: 2.6 | Location: 20 km S of Denali National Park, Alaska | Depth: 0.8 km | Date/time: Nov 04, 2026 11:28:36 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vwjrrv"
+  Text: -10,4,1,"2.6"
+End:
 Object: 19.2256,-68.1196
   Icon: 0,0,000,3,1,"Magnitude: 4.0 | Location: 77 km NNE of Punta Cana, Dominican Republic | Depth: 20.8 km | Date/time: Nov 04, 2026 10:59:21 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvyl"
   Text: -10,4,1,"4.0"
@@ -690,4 +694,4 @@ Object: 64.3830,-148.0230
   Icon: 0,0,000,1,1,"Magnitude: 1.2 | Location: 48 km SSW of South Van Horn, Alaska | Depth: 10.9 km | Date/time: Nov 03, 2026 11:31:47 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vuntwn"
   Text: -10,4,1,"1.2"
 End:
-; Events plotted: 170
+; Events plotted: 171
