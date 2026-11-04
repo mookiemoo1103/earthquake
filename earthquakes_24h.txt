@@ -10,9 +10,33 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
-Object: 33.5085,-116.4865
-  Icon: 0,0,000,1,1,"Magnitude: 1.3 | Location: 18 km ESE of Anza, CA | Depth: 15.3 km | Date/time: Nov 04, 2026 06:18:46 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41572416"
-  Text: -10,4,1,"1.3"
+Object: 19.3343,-155.1240
+  Icon: 0,0,000,2,1,"Magnitude: 2.2 | Location: 14 km S of Fern Forest, Hawaii | Depth: 1.2 km | Date/time: Nov 04, 2026 07:22:46 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/hv75068461"
+  Text: -10,4,1,"2.2"
+End:
+Object: 57.9530,-155.5860
+  Icon: 0,0,000,1,1,"Magnitude: 1.2 | Location: 79 km WNW of Karluk, Alaska | Depth: 5.0 km | Date/time: Nov 04, 2026 07:21:27 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vwblko"
+  Text: -10,4,1,"1.2"
+End:
+Object: 62.5250,-151.0830
+  Icon: 0,0,000,2,1,"Magnitude: 2.0 | Location: 16 km W of Petersville, Alaska | Depth: 81.8 km | Date/time: Nov 04, 2026 06:53:43 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vwaniq"
+  Text: -10,4,1,"2.0"
+End:
+Object: 33.9355,-117.0380
+  Icon: 0,0,000,1,1,"Magnitude: 0.8 | Location: 6 km W of Beaumont, CA | Depth: 16.8 km | Date/time: Nov 04, 2026 06:47:05 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41572432"
+  Text: -10,4,1,"0.8"
+End:
+Object: 33.5338,-116.7105
+  Icon: 0,0,000,1,1,"Magnitude: 0.4 | Location: 4 km SW of Anza, CA | Depth: 6.3 km | Date/time: Nov 04, 2026 06:45:18 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41572424"
+  Text: -10,4,1,"0.4"
+End:
+Object: 55.9520,-159.7630
+  Icon: 0,0,000,2,1,"Magnitude: 2.3 | Location: 18 km WNW of Ivanof Bay, Alaska | Depth: 35.9 km | Date/time: Nov 04, 2026 06:24:23 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vvznyb"
+  Text: -10,4,1,"2.3"
+End:
+Object: 33.5077,-116.4935
+  Icon: 0,0,000,1,1,"Magnitude: 1.0 | Location: 18 km ESE of Anza, CA | Depth: 13.7 km | Date/time: Nov 04, 2026 06:18:46 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41572416"
+  Text: -10,4,1,"1.0"
 End:
 Object: 37.4502,-118.8303
   Icon: 0,0,000,1,1,"Magnitude: 1.7 | Location: 18 km SW of Toms Place, CA | Depth: 0.2 km | Date/time: Nov 04, 2026 06:17:32 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75462342"
@@ -85,6 +109,10 @@ End:
 Object: 4.3895,127.0325
   Icon: 0,0,000,4,1,"Magnitude: 5.0 | Location: 207 km ESE of Sarangani, Philippines | Depth: 49.1 km | Date/time: Nov 04, 2026 01:40:12 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvwj"
   Text: -10,4,1,"5.0"
+End:
+Object: 35.0632,-97.9738
+  Icon: 0,0,000,1,1,"Magnitude: 1.1 | Location: 3 km WNW of Chickasha, Oklahoma | Depth: 11.4 km | Date/time: Nov 04, 2026 01:32:02 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ok2026vpmj"
+  Text: -10,4,1,"1.1"
 End:
 Object: 17.9567,-66.9560
   Icon: 0,0,000,2,1,"Magnitude: 2.0 | Location: 5 km WSW of Guánica, Puerto Rico | Depth: 8.5 km | Date/time: Nov 04, 2026 01:29:54 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/pr71538443"
@@ -662,48 +690,4 @@ Object: 38.5218,-112.9187
   Icon: 0,0,000,2,1,"Magnitude: 2.2 | Location: 16 km NNE of Milford, Utah | Depth: 3.7 km | Date/time: Nov 03, 2026 07:43:47 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/uu80162611"
   Text: -10,4,1,"2.2"
 End:
-Object: -58.8190,-26.3766
-  Icon: 0,0,000,3,1,"Magnitude: 4.9 | Location: South Sandwich Islands region | Depth: 152.0 km | Date/time: Nov 03, 2026 07:34:06 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv5i"
-  Text: -10,4,1,"4.9"
-End:
-Object: 19.1642,-155.4850
-  Icon: 0,0,000,1,1,"Magnitude: 1.8 | Location: 4 km S of Pāhala, Hawaii | Depth: 28.9 km | Date/time: Nov 03, 2026 07:32:21 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/hv75068161"
-  Text: -10,4,1,"1.8"
-End:
-Object: 33.5130,-116.4487
-  Icon: 0,0,000,1,1,"Magnitude: 0.4 | Location: 21 km SW of La Quinta, CA | Depth: 6.2 km | Date/time: Nov 03, 2026 07:29:23 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41571960"
-  Text: -10,4,1,"0.4"
-End:
-Object: 61.6950,-151.6300
-  Icon: 0,0,000,1,1,"Magnitude: 1.9 | Location: 35 km SSW of Skwentna, Alaska | Depth: 80.0 km | Date/time: Nov 03, 2026 07:27:33 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vufqcp"
-  Text: -10,4,1,"1.9"
-End:
-Object: 47.6828,-120.2427
-  Icon: 0,0,000,1,1,"Magnitude: 1.2 | Location: 2 km WNW of Entiat, Washington | Depth: 1.3 km | Date/time: Nov 03, 2026 07:15:33 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/uw714133861"
-  Text: -10,4,1,"1.2"
-End:
-Object: 33.5343,-116.7087
-  Icon: 0,0,000,1,1,"Magnitude: 0.1 | Location: 4 km SW of Anza, CA | Depth: 6.0 km | Date/time: Nov 03, 2026 07:13:38 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41571952"
-  Text: -10,4,1,"0.1"
-End:
-Object: 50.7164,-102.0484
-  Icon: 0,0,000,3,1,"Magnitude: 4.0 | Location: 7 km NNE of Esterhazy, Canada | Depth: 10.0 km | Date/time: Nov 03, 2026 07:04:52 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/us7000tv59"
-  Text: -10,4,1,"4.0"
-End:
-Object: 59.5460,-152.8370
-  Icon: 0,0,000,2,1,"Magnitude: 2.3 | Location: 56 km WNW of Nanwalek, Alaska | Depth: 96.7 km | Date/time: Nov 03, 2026 06:37:46 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vudsgu"
-  Text: -10,4,1,"2.3"
-End:
-Object: 59.5430,-152.8170
-  Icon: 0,0,000,2,1,"Magnitude: 2.6 | Location: 54 km WNW of Nanwalek, Alaska | Depth: 98.3 km | Date/time: Nov 03, 2026 06:37:46 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vudyyh"
-  Text: -10,4,1,"2.6"
-End:
-Object: 39.0509,-118.5567
-  Icon: 0,0,000,1,1,"Magnitude: 1.8 | Location: 24 km ENE of Schurz, Nevada | Depth: 12.6 km | Date/time: Nov 03, 2026 06:36:35 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nn00926581"
-  Text: -10,4,1,"1.8"
-End:
-Object: 38.8303,-122.8158
-  Icon: 0,0,000,1,1,"Magnitude: 0.4 | Location: 8 km NW of The Geysers, CA | Depth: 2.2 km | Date/time: Nov 03, 2026 06:24:44 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75462007"
-  Text: -10,4,1,"0.4"
-End:
-; Events plotted: 174
+; Events plotted: 170
