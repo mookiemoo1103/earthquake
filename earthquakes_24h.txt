@@ -10,6 +10,10 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 38.8353,-122.8173
+  Icon: 0,0,000,1,1,"Magnitude: 0.9 | Location: 8 km W of Cobb, CA | Depth: 1.9 km | Date/time: Nov 04, 2026 01:53:23 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75462297"
+  Text: -10,4,1,"0.9"
+End:
 Object: 62.4350,-148.8160
   Icon: 0,0,000,2,1,"Magnitude: 2.0 | Location: 61 km ENE of Susitna North, Alaska | Depth: 5.0 km | Date/time: Nov 04, 2026 01:06:05 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vvoxxx"
   Text: -10,4,1,"2.0"
@@ -770,4 +774,4 @@ Object: 38.7958,-122.7633
   Icon: 0,0,000,1,1,"Magnitude: 1.9 | Location: 2 km NNW of The Geysers, CA | Depth: 0.6 km | Date/time: Nov 03, 2026 02:00:24 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75461927"
   Text: -10,4,1,"1.9"
 End:
-; Events plotted: 190
+; Events plotted: 191
