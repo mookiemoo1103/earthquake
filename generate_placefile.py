@@ -1,52 +1,21 @@
-#!/usr/bin/env python3
-"""Build a USGS past-24-hour earthquake placefile for AguaceroWx."""
-import json
-import pathlib
-import urllib.request
-from datetime import datetime, timedelta, timezone
-from zoneinfo import ZoneInfo
-
-FEED_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
-OUTPUT = "earthquakes_24h.txt"
-USER_AGENT = "AguaceroWx-USGS-Earthquake-Placefile/1.3"
-ASSET_BASE = "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets"
-
-# Color bands retained from the previous version.
-MAGNITUDE_BANDS = (
-    (0.0, 1.9, "green", 1),
-    (2.0, 3.9, "yellow", 2),
-    (4.0, 4.9, "orange", 3),
-    (5.0, 6.9, "red", 4),
-    (7.0, 10.0, "purple", 5),
-)
-
-def select_icon(magnitude):
-    if magnitude is None:
-        return "gray", 6
-    for lower, upper, color, icon_id in MAGNITUDE_BANDS:
-        if lower <= float(magnitude) <= upper:
-            return color, icon_id
-    return "gray", 6
-
-def clean_field(value):
-    """Keep quotes and line breaks from breaking placefile object syntax."""
-    return str(value or "").replace('"', "'").replace("\r", " ").replace("\n", " ")
-
-def central_time(timestamp_ms):
+def local_datetime(timestamp_ms):
     instant = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
-    return instant.astimezone(ZoneInfo("America/Chicago")).strftime(
-        "%b %d, %Y %I:%M:%S %p %Z"
+    local = instant.astimezone(ZoneInfo("America/Chicago"))
+    return (
+        local.strftime("%b %d, %Y"),
+        local.strftime("%I:%M:%S %p %Z"),
     )
 
 def main():
-    req = urllib.request.Request(
+    request = urllib.request.Request(
         FEED_URL, headers={"User-Agent": USER_AGENT}
     )
-    with urllib.request.urlopen(req, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=30) as response:
         feed = json.loads(response.read().decode("utf-8"))
 
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
-    cutoff_ms = int(cutoff.timestamp() * 1000)
+    cutoff_ms = int(
+        (datetime.now(timezone.utc) - timedelta(hours=24)).timestamp() * 1000
+    )
     earthquakes = []
 
     for feature in feed.get("features", []):
@@ -54,6 +23,7 @@ def main():
         geometry = feature.get("geometry") or {}
         coordinates = geometry.get("coordinates") or []
         event_time = props.get("time")
+
         if event_time is None or len(coordinates) < 3:
             continue
         event_time = int(event_time)
@@ -65,21 +35,22 @@ def main():
             continue
 
         magnitude = props.get("mag")
-        mag_text = f"{float(magnitude):.1f}" if magnitude is not None else "?"
-        place = clean_field(props.get("place") or "Location not reported")
-        url = clean_field(props.get("url") or "")
+        magnitude_text = (
+            f"{float(magnitude):.1f}" if magnitude is not None else "?"
+        )
         depth_text = (
             f"{float(depth_km):.1f} km"
             if isinstance(depth_km, (int, float)) else "Unknown"
         )
+
         earthquakes.append({
             "time": event_time,
             "lat": float(latitude),
             "lon": float(longitude),
-            "mag": magnitude,
-            "mag_text": mag_text,
-            "place": place,
-            "url": url,
+            "magnitude": magnitude,
+            "magnitude_text": magnitude_text,
+            "place": clean_field(props.get("place") or "Location not reported"),
+            "url": clean_field(props.get("url") or ""),
             "depth": depth_text,
         })
 
@@ -87,7 +58,7 @@ def main():
 
     lines = [
         "; USGS Earthquakes - Past 24 Hours",
-        "; Magnitude text is horizontally centered over the icon.",
+        "; Hover over an earthquake icon for event details.",
         "Title: USGS Earthquakes - Last 24 Hours",
         "RefreshSeconds: 10",
         'Font: 1, 12, 1, "Arial"',
@@ -101,26 +72,34 @@ def main():
     ]
 
     for quake in earthquakes:
-        _, icon_id = select_icon(quake["mag"])
-        magnitude_text = quake["mag_text"]
+        _, icon_id = select_icon(quake["magnitude"])
+        magnitude_text = quake["magnitude_text"]
 
-        # Approximate Arial 12-pixel character width and center variable-width
-        # magnitude labels on the icon's 0,0 hotspot.
-        estimated_text_width = len(magnitude_text) * 7
-        x_offset = -round(estimated_text_width / 2)
+        # Keep the magnitude label centered over the icon.
+        text_width = len(magnitude_text) * 7
+        x_offset = -round(text_width / 2)
 
-        tooltip = (
-            f"Magnitude: {magnitude_text} | "
+        event_date, event_time = local_datetime(quake["time"])
+        magnitude_detail = (
+            f"{float(quake['magnitude']):.1f}"
+            if quake["magnitude"] is not None else "Unknown"
+        )
+
+        # GRLevelX/AguaceroWx hoverText is the final quoted field in Icon.
+        # Keep it on one line and avoid embedded quote characters.
+        hover_text = clean_field(
+            f"USGS EARTHQUAKE | "
+            f"Magnitude: {magnitude_detail} | "
+            f"Date: {event_date} | "
+            f"Time: {event_time} | "
             f"Location: {quake['place']} | "
             f"Depth: {quake['depth']} | "
-            f"Date/time: {central_time(quake['time'])} | "
-            f"USGS: {quake['url']}"
+            f"USGS Event: {quake['url']}"
         )
-        tooltip = clean_field(tooltip)
 
         lines.extend([
             f"Object: {quake['lat']:.4f},{quake['lon']:.4f}",
-            f'  Icon: 0,0,000,{icon_id},1,"{tooltip}"',
+            f'  Icon: 0,0,000,{icon_id},1,"{hover_text}"',
             f'  Text: {x_offset},4,1,"{magnitude_text}"',
             "End:",
         ])
@@ -129,7 +108,9 @@ def main():
         lines.append("; No USGS earthquakes were returned for the past 24 hours.")
 
     lines.append(f"; Events plotted: {len(earthquakes)}")
-    pathlib.Path(OUTPUT).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    pathlib.Path(OUTPUT).write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
     print(f"Generated {OUTPUT}: {len(earthquakes)} earthquake(s).")
 
 if __name__ == "__main__":
