@@ -14,6 +14,14 @@ Object: 38.8353,-122.8173
   Icon: 0,0,000,1,1,"Magnitude: 0.9 | Location: 8 km W of Cobb, CA | Depth: 1.9 km | Date/time: Nov 04, 2026 01:53:23 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75462297"
   Text: -10,4,1,"0.9"
 End:
+Object: 4.3895,127.0325
+  Icon: 0,0,000,4,1,"Magnitude: 5.0 | Location: 207 km ESE of Sarangani, Philippines | Depth: 49.1 km | Date/time: Nov 04, 2026 01:40:12 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/us7000tvwj"
+  Text: -10,4,1,"5.0"
+End:
+Object: 17.9567,-66.9560
+  Icon: 0,0,000,2,1,"Magnitude: 2.0 | Location: 5 km WSW of Guánica, Puerto Rico | Depth: 8.5 km | Date/time: Nov 04, 2026 01:29:54 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/pr71538443"
+  Text: -10,4,1,"2.0"
+End:
 Object: 62.4350,-148.8160
   Icon: 0,0,000,2,1,"Magnitude: 2.0 | Location: 61 km ENE of Susitna North, Alaska | Depth: 5.0 km | Date/time: Nov 04, 2026 01:06:05 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vvoxxx"
   Text: -10,4,1,"2.0"
@@ -765,13 +773,5 @@ End:
 Object: 32.4205,-115.1663
   Icon: 0,0,000,1,1,"Magnitude: 1.7 | Location: 8 km NNE of Delta, B.C., MX | Depth: 11.6 km | Date/time: Nov 03, 2026 02:08:06 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41571904"
   Text: -10,4,1,"1.7"
-End:
-Object: 38.2840,-112.2847
-  Icon: 0,0,000,6,1,"Magnitude: 1.9 | Location: 7 km NW of Junction, Utah | Depth: 8.2 km | Date/time: Nov 03, 2026 02:01:10 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/uu80162541"
-  Text: -10,4,1,"1.9"
-End:
-Object: 38.7958,-122.7633
-  Icon: 0,0,000,1,1,"Magnitude: 1.9 | Location: 2 km NNW of The Geysers, CA | Depth: 0.6 km | Date/time: Nov 03, 2026 02:00:24 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/nc75461927"
-  Text: -10,4,1,"1.9"
 End:
 ; Events plotted: 191
