@@ -9,8 +9,7 @@ from zoneinfo import ZoneInfo
 
 FEED_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
 OUTPUT = "earthquakes_24h.txt"
-USER_AGENT = "AguaceroWx-USGS-Earthquake-Placefile/1.4"
-
+USER_AGENT = "AguaceroWx-USGS-Earthquake-Placefile/1.5"
 ASSET_BASE = "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets"
 
 MAGNITUDE_BANDS = (
@@ -33,25 +32,13 @@ def select_icon(magnitude):
     return "gray", 6
 
 
-def clean_field(value):
-    """Keep quotes and line breaks from breaking placefile syntax."""
-    return (
-        str(value or "")
-        .replace('"', "'")
-        .replace("\r", " ")
-        .replace("\n", " ")
-    )
-
-
 def local_datetime(timestamp_ms):
+    """Convert a USGS timestamp to Central Time."""
     instant = datetime.fromtimestamp(
         timestamp_ms / 1000,
         tz=timezone.utc
     )
-
-    local = instant.astimezone(
-        ZoneInfo("America/Chicago")
-    )
+    local = instant.astimezone(ZoneInfo("America/Chicago"))
 
     return (
         local.strftime("%b %d, %Y"),
@@ -60,19 +47,16 @@ def local_datetime(timestamp_ms):
 
 
 def main():
-
     # Download the latest USGS earthquake data.
     request = urllib.request.Request(
         FEED_URL,
-        headers={"User-Agent": USER_AGENT}
+        headers={"User-Agent": USER_AGENT},
     )
 
     with urllib.request.urlopen(request, timeout=30) as response:
-        feed = json.loads(
-            response.read().decode("utf-8")
-        )
+        feed = json.loads(response.read().decode("utf-8"))
 
-    # Only include earthquakes from the past 24 hours.
+    # Keep only earthquakes from the past 24 hours.
     cutoff_ms = int(
         (
             datetime.now(timezone.utc)
@@ -83,11 +67,9 @@ def main():
     earthquakes = []
 
     for feature in feed.get("features", []):
-
         props = feature.get("properties") or {}
         geometry = feature.get("geometry") or {}
         coordinates = geometry.get("coordinates") or []
-
         event_time = props.get("time")
 
         if event_time is None or len(coordinates) < 3:
@@ -103,94 +85,73 @@ def main():
         if latitude is None or longitude is None:
             continue
 
-        magnitude = props.get("mag")
-
-        magnitude_text = (
-            f"{float(magnitude):.1f}"
-            if magnitude is not None
-            else "?"
-        )
-
-        depth_text = (
-            f"{float(depth_km):.1f} km"
+        # Convert depth from kilometers to miles.
+        depth_miles = (
+            float(depth_km) * 0.621371
             if isinstance(depth_km, (int, float))
-            else "Unknown"
+            else None
         )
 
         earthquakes.append({
             "time": event_time,
             "lat": float(latitude),
             "lon": float(longitude),
-            "magnitude": magnitude,
-            "magnitude_text": magnitude_text,
-            "place": clean_field(
-                props.get("place") or "Location not reported"
-            ),
-            "url": clean_field(
-                props.get("url") or ""
-            ),
-            "depth": depth_text,
+            "magnitude": props.get("mag"),
+            "depth_miles": depth_miles,
         })
 
-    # Sort newest earthquakes first.
     earthquakes.sort(
         key=lambda item: item["time"],
         reverse=True
     )
 
-    # Build the placefile.
+    # Placefile definitions and existing icon assets.
     lines = [
         "; USGS Earthquakes - Past 24 Hours",
-        "; Hover over an earthquake icon for event details.",
+        "; Click an earthquake icon for date, time, and depth in miles.",
         "Title: USGS Earthquakes - Last 24 Hours",
         "RefreshSeconds: 10",
         'Font: 1, 12, 1, "Arial"',
-
         f'IconFile: 1, 32, 32, 16, 16, "{ASSET_BASE}/dot_green.png"',
         f'IconFile: 2, 32, 32, 16, 16, "{ASSET_BASE}/dot_yellow.png"',
         f'IconFile: 3, 32, 32, 16, 16, "{ASSET_BASE}/dot_orange.png"',
         f'IconFile: 4, 32, 32, 16, 16, "{ASSET_BASE}/dot_red.png"',
         f'IconFile: 5, 32, 32, 16, 16, "{ASSET_BASE}/dot_purple.png"',
         f'IconFile: 6, 32, 32, 16, 16, "{ASSET_BASE}/dot_gray.png"',
-
         "Color: 255 255 255",
     ]
 
     for quake in earthquakes:
+        _, icon_id = select_icon(quake["magnitude"])
 
-        _, icon_id = select_icon(
-            quake["magnitude"]
+        magnitude = quake["magnitude"]
+        magnitude_text = (
+            f"{float(magnitude):.1f}"
+            if magnitude is not None
+            else "?"
         )
-
-        magnitude_text = quake["magnitude_text"]
 
         # Center the magnitude label over the icon.
         text_width = len(magnitude_text) * 7
         x_offset = -round(text_width / 2)
 
-        event_date, event_time = local_datetime(
-            quake["time"]
-        )
+        event_date, event_time = local_datetime(quake["time"])
 
-        magnitude_detail = (
-            f"{float(quake['magnitude']):.1f}"
-            if quake["magnitude"] is not None
+        depth_text = (
+            f'{quake["depth_miles"]:.1f} miles'
+            if quake["depth_miles"] is not None
             else "Unknown"
         )
 
-        # Hover information for each earthquake.
-        hover_text = clean_field(
-            f"USGS EARTHQUAKE | "
-            f"Magnitude: {magnitude_detail} | "
-            f"Date: {event_date} | "
-            f"Time: {event_time} | "
-            f"Location: {quake['place']} | "
-            f"Depth: {quake['depth']} | "
-            f"USGS Event: {quake['url']}"
+        # Click information: three stacked lines.
+        hover_text = (
+            f"Date: {event_date}\\n"
+            f"Time: {event_time}\\n"
+            f"Depth: {depth_text}"
         )
 
         lines.extend([
-            f"Object: {quake['lat']:.4f},{quake['lon']:.4f}",
+            f'Object: {quake["lat"]:.4f},{quake["lon"]:.4f}',
             f'  Icon: 0,0,000,{icon_id},1,"{hover_text}"',
             f'  Text: {x_offset},4,1,"{magnitude_text}"',
             "End:",
@@ -205,7 +166,6 @@ def main():
         f"; Events plotted: {len(earthquakes)}"
     )
 
-    # Write the finished placefile.
     pathlib.Path(OUTPUT).write_text(
         "\n".join(lines) + "\n",
         encoding="utf-8"
