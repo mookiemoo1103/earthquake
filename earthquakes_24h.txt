@@ -770,8 +770,4 @@ Object: 61.6310,-150.5210
   Icon: 0,0,000,2,1,"Magnitude: 2.5 | Location: 9 km N of Susitna, Alaska | Depth: 51.8 km | Date/time: Nov 03, 2026 02:31:06 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/aka2026vtvtat"
   Text: -10,4,1,"2.5"
 End:
-Object: 32.4205,-115.1663
-  Icon: 0,0,000,1,1,"Magnitude: 1.7 | Location: 8 km NNE of Delta, B.C., MX | Depth: 11.6 km | Date/time: Nov 03, 2026 02:08:06 AM CST | USGS: https://earthquake.usgs.gov/earthquakes/eventpage/ci41571904"
-  Text: -10,4,1,"1.7"
-End:
-; Events plotted: 191
+; Events plotted: 190
