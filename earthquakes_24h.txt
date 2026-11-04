@@ -1,0 +1,6 @@
+; USGS Earthquakes - Past 24 Hours
+; Generated placefile will contain one GRLevelX directive per line.
+Title: USGS Earthquakes - Last 24 Hours
+RefreshSeconds: 10
+Font: 1, 12, 1, "Arial"
+; Run the GitHub Actions workflow to populate live earthquake markers.
