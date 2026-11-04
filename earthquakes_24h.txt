@@ -1,0 +1,7 @@
+; USGS Earthquakes - Past 24 Hours
+; Sample header. The GitHub Action generates the live event entries.
+Title: USGS Earthquakes - Last 24 Hours
+RefreshSeconds: 10
+Font: 1, 12, 1, "Arial"
+Color: 190 190 190
+Place: 0, 0, Initializing - run the GitHub workflow to populate earthquake markers
