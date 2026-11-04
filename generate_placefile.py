@@ -2,6 +2,7 @@
 """Generate an AguaceroWx-compatible GRLevelX placefile from the USGS past-day feed."""
 import json
 import os
+import pathlib
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
