@@ -10,6 +10,34 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 38.8057,-122.8148
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:46:12 AM CST\nDepth: 2.0 miles"
+  Text: -10,4,1,"0.8"
+End:
+Object: 19.4045,-155.4535
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:25:18 AM CST\nDepth: 3.6 miles"
+  Text: -10,4,1,"1.7"
+End:
+Object: 61.5900,-146.4520
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:24:31 AM CST\nDepth: 12.4 miles"
+  Text: -10,4,1,"1.9"
+End:
+Object: 38.8243,-122.7665
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:23:24 AM CST\nDepth: 1.4 miles"
+  Text: -10,4,1,"0.7"
+End:
+Object: 60.2340,-153.1020
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 06:17:06 AM CST\nDepth: 84.4 miles"
+  Text: -10,4,1,"2.3"
+End:
+Object: 38.8432,-122.8168
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:10:04 AM CST\nDepth: 1.0 miles"
+  Text: -10,4,1,"0.3"
+End:
+Object: 33.0515,-115.9138
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 06:09:20 AM CST\nDepth: 1.6 miles"
+  Text: -10,4,1,"1.5"
+End:
 Object: 33.5177,-116.7372
   Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 05:53:02 AM CST\nDepth: 2.6 miles"
   Text: -10,4,1,"0.5"
@@ -42,8 +70,8 @@ Object: 40.8362,-122.1322
   Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:31:40 AM CST\nDepth: 11.0 miles"
   Text: -10,4,1,"2.0"
 End:
-Object: 35.6224,-98.0332
-  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:31:13 AM CST\nDepth: 1.1 miles"
+Object: 35.6135,-98.0452
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:31:13 AM CST\nDepth: 4.1 miles"
   Text: -10,4,1,"2.8"
 End:
 Object: 63.4860,-151.0510
@@ -710,64 +738,4 @@ Object: 57.4430,-156.2520
   Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 07:20:59 AM CST\nDepth: 60.9 miles"
   Text: -10,4,1,"2.1"
 End:
-Object: 39.3050,-111.2137
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:58:39 AM CST\nDepth: -1.0 miles"
-  Text: -10,4,1,"1.4"
-End:
-Object: 62.5250,-151.0830
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 06:53:43 AM CST\nDepth: 50.8 miles"
-  Text: -10,4,1,"2.0"
-End:
-Object: 31.6690,-104.4310
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:50:14 AM CST\nDepth: 4.5 miles"
-  Text: -10,4,1,"1.8"
-End:
-Object: 54.7660,-163.6910
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:48:19 AM CST\nDepth: -0.9 miles"
-  Text: -10,4,1,"1.2"
-End:
-Object: 33.9353,-117.0388
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:47:05 AM CST\nDepth: 10.4 miles"
-  Text: -10,4,1,"0.8"
-End:
-Object: 33.5338,-116.7105
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:45:18 AM CST\nDepth: 3.9 miles"
-  Text: -10,4,1,"0.4"
-End:
-Object: 61.2663,-152.1813
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:34:52 AM CST\nDepth: 14.5 miles"
-  Text: -10,4,1,"0.1"
-End:
-Object: 52.2397,-168.7640
-  Icon: 0,0,000,3,1,"Date: Nov 04, 2026\nTime: 06:22:50 AM CST\nDepth: 7.2 miles"
-  Text: -10,4,1,"4.3"
-End:
-Object: 46.7630,-121.9323
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:19:48 AM CST\nDepth: 4.4 miles"
-  Text: -10,4,1,"0.0"
-End:
-Object: 33.5077,-116.4935
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:18:46 AM CST\nDepth: 8.5 miles"
-  Text: -10,4,1,"1.0"
-End:
-Object: 37.4502,-118.8303
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:17:32 AM CST\nDepth: 0.1 miles"
-  Text: -10,4,1,"1.7"
-End:
-Object: 61.5302,-151.9035
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:15:50 AM CST\nDepth: 7.5 miles"
-  Text: -10,4,1,"1.0"
-End:
-Object: 35.3115,-117.8028
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 06:14:52 AM CST\nDepth: 4.3 miles"
-  Text: -10,4,1,"1.2"
-End:
-Object: -5.4706,152.0301
-  Icon: 0,0,000,3,1,"Date: Nov 04, 2026\nTime: 06:14:45 AM CST\nDepth: 6.2 miles"
-  Text: -10,4,1,"4.3"
-End:
-Object: 61.0470,-151.2170
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 06:12:50 AM CST\nDepth: 47.1 miles"
-  Text: -10,4,1,"2.8"
-End:
-; Events plotted: 190
+; Events plotted: 182
