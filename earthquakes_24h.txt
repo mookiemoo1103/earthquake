@@ -10,6 +10,34 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 40.8362,-122.1322
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:31:40 AM CST\nDepth: 11.0 miles"
+  Text: -10,4,1,"2.0"
+End:
+Object: 35.6224,-98.0332
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:31:13 AM CST\nDepth: 1.1 miles"
+  Text: -10,4,1,"2.8"
+End:
+Object: 63.4860,-151.0510
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 04:25:37 AM CST\nDepth: 3.1 miles"
+  Text: -10,4,1,"2.2"
+End:
+Object: 40.8363,-122.1232
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 04:25:28 AM CST\nDepth: 9.4 miles"
+  Text: -10,4,1,"1.9"
+End:
+Object: 35.9050,-117.7460
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 04:11:14 AM CST\nDepth: 4.9 miles"
+  Text: -10,4,1,"0.8"
+End:
+Object: 49.2594,147.7534
+  Icon: 0,0,000,3,1,"Date: Nov 05, 2026\nTime: 04:09:33 AM CST\nDepth: 344.5 miles"
+  Text: -10,4,1,"4.8"
+End:
+Object: 33.5363,-116.7093
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 04:00:50 AM CST\nDepth: 3.8 miles"
+  Text: -10,4,1,"0.3"
+End:
 Object: 60.0500,-148.8390
   Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 03:59:53 AM CST\nDepth: 3.1 miles"
   Text: -10,4,1,"1.8"
@@ -730,40 +758,4 @@ Object: 17.8617,-66.3958
   Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 05:13:41 AM CST\nDepth: 5.3 miles"
   Text: -10,4,1,"1.7"
 End:
-Object: 60.1450,-153.0957
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 05:02:51 AM CST\nDepth: 2.8 miles"
-  Text: -10,4,1,"0.1"
-End:
-Object: 38.7958,-122.8090
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 04:52:20 AM CST\nDepth: 2.1 miles"
-  Text: -10,4,1,"0.9"
-End:
-Object: 33.2072,-116.7035
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 04:47:28 AM CST\nDepth: 5.3 miles"
-  Text: -10,4,1,"0.8"
-End:
-Object: 57.6700,-154.1080
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 04:42:57 AM CST\nDepth: 7.1 miles"
-  Text: -10,4,1,"2.4"
-End:
-Object: 61.5740,-146.6700
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 04:20:19 AM CST\nDepth: 34.7 miles"
-  Text: -10,4,1,"1.6"
-End:
-Object: 31.8800,-101.7380
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 04:17:33 AM CST\nDepth: 4.4 miles"
-  Text: -10,4,1,"2.5"
-End:
-Object: 35.3087,-117.8007
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 04:14:19 AM CST\nDepth: 3.8 miles"
-  Text: -10,4,1,"1.0"
-End:
-Object: 32.8602,-116.5783
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 04:04:59 AM CST\nDepth: 8.7 miles"
-  Text: -10,4,1,"2.4"
-End:
-Object: 46.5627,-124.0755
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 04:03:07 AM CST\nDepth: 19.7 miles"
-  Text: -10,4,1,"1.5"
-End:
-; Events plotted: 189
+; Events plotted: 187
