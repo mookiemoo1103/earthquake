@@ -10,6 +10,34 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 38.7767,-122.9320
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 08:28:21 PM CST\nDepth: 2.8 miles"
+  Text: -10,4,1,"1.8"
+End:
+Object: 33.5332,-116.7113
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 08:26:16 PM CST\nDepth: 3.7 miles"
+  Text: -10,4,1,"1.0"
+End:
+Object: 59.2170,-153.6060
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 08:04:58 PM CST\nDepth: 67.0 miles"
+  Text: -10,4,1,"1.7"
+End:
+Object: -19.3647,168.7529
+  Icon: 0,0,000,3,1,"Date: Nov 05, 2026\nTime: 07:37:39 PM CST\nDepth: 51.7 miles"
+  Text: -10,4,1,"4.6"
+End:
+Object: 59.3820,-152.8720
+  Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 07:35:46 PM CST\nDepth: 53.7 miles"
+  Text: -10,4,1,"2.2"
+End:
+Object: 60.3170,-152.9790
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 07:34:56 PM CST\nDepth: 16.9 miles"
+  Text: -10,4,1,"0.8"
+End:
+Object: 35.9073,-120.9017
+  Icon: 0,0,000,1,1,"Date: Nov 05, 2026\nTime: 07:34:53 PM CST\nDepth: 3.9 miles"
+  Text: -10,4,1,"0.6"
+End:
 Object: 35.9788,-120.8728
   Icon: 0,0,000,2,1,"Date: Nov 05, 2026\nTime: 07:29:25 PM CST\nDepth: 6.1 miles"
   Text: -10,4,1,"2.1"
@@ -894,16 +922,4 @@ Object: 19.1515,-155.4527
   Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 08:40:13 PM CST\nDepth: 20.0 miles"
   Text: -10,4,1,"2.1"
 End:
-Object: 62.8760,-149.8000
-  Icon: 0,0,000,2,1,"Date: Nov 04, 2026\nTime: 08:25:32 PM CST\nDepth: 46.9 miles"
-  Text: -10,4,1,"2.1"
-End:
-Object: 35.7732,-121.2090
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 08:23:54 PM CST\nDepth: 4.8 miles"
-  Text: -10,4,1,"1.8"
-End:
-Object: 33.4958,-116.4785
-  Icon: 0,0,000,1,1,"Date: Nov 04, 2026\nTime: 07:38:44 PM CST\nDepth: 7.3 miles"
-  Text: -10,4,1,"0.7"
-End:
-; Events plotted: 224
+; Events plotted: 228
