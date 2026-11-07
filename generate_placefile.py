@@ -143,11 +143,23 @@ def main():
             else "Unknown"
         )
 
-        # Click information: three stacked lines.
+        magnitude_detail = (
+            f"{float(magnitude):.1f}"
+            if magnitude is not None
+            else "Not reported"
+        )
+        depth_detail = (
+            f'{quake["depth_miles"]:.1f} miles deep'
+            if quake["depth_miles"] is not None
+            else "Unknown"
+        )
+
+        # Click information: date, time, magnitude, and depth.
         hover_text = (
             f"Date: {event_date}\\n"
             f"Time: {event_time}\\n"
-            f"Depth: {depth_text}"
+            f"Magnitude: {magnitude_detail}\\n"
+            f"Depth: {depth_detail}"
         )
 
         lines.extend([
