@@ -10,6 +10,14 @@ IconFile: 4, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/ea
 IconFile: 5, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_purple.png"
 IconFile: 6, 32, 32, 16, 16, "https://raw.githubusercontent.com/mookiemoo1103/earthquake/main/assets/dot_gray.png"
 Color: 255 255 255
+Object: 38.8103,-122.8013
+  Icon: 0,0,000,1,1,"Date: Nov 07, 2026\nTime: 04:26:20 AM CST\nDepth: 1.3 miles"
+  Text: -10,4,1,"1.0"
+End:
+Object: 33.4687,-116.4598
+  Icon: 0,0,000,1,1,"Date: Nov 07, 2026\nTime: 04:20:01 AM CST\nDepth: 6.9 miles"
+  Text: -10,4,1,"1.8"
+End:
 Object: 33.8370,-116.2092
   Icon: 0,0,000,1,1,"Date: Nov 07, 2026\nTime: 04:03:26 AM CST\nDepth: 5.1 miles"
   Text: -10,4,1,"0.6"
@@ -694,36 +702,4 @@ Object: 35.5403,-96.7485
   Icon: 0,0,000,1,1,"Date: Nov 06, 2026\nTime: 05:00:33 AM CST\nDepth: 4.3 miles"
   Text: -10,4,1,"1.1"
 End:
-Object: 18.8922,-65.4767
-  Icon: 0,0,000,2,1,"Date: Nov 06, 2026\nTime: 04:59:41 AM CST\nDepth: 37.4 miles"
-  Text: -10,4,1,"3.1"
-End:
-Object: 34.3828,-119.2452
-  Icon: 0,0,000,1,1,"Date: Nov 06, 2026\nTime: 04:56:01 AM CST\nDepth: 1.6 miles"
-  Text: -10,4,1,"1.5"
-End:
-Object: 19.3723,-155.8588
-  Icon: 0,0,000,2,1,"Date: Nov 06, 2026\nTime: 04:48:59 AM CST\nDepth: 45.4 miles"
-  Text: -10,4,1,"2.4"
-End:
-Object: 33.4680,-116.4232
-  Icon: 0,0,000,1,1,"Date: Nov 06, 2026\nTime: 04:45:28 AM CST\nDepth: 8.0 miles"
-  Text: -10,4,1,"0.4"
-End:
-Object: 33.1803,-116.7303
-  Icon: 0,0,000,1,1,"Date: Nov 06, 2026\nTime: 04:45:17 AM CST\nDepth: 7.1 miles"
-  Text: -10,4,1,"0.4"
-End:
-Object: 34.9677,142.1175
-  Icon: 0,0,000,4,1,"Date: Nov 06, 2026\nTime: 04:39:27 AM CST\nDepth: 18.0 miles"
-  Text: -10,4,1,"6.1"
-End:
-Object: 61.3100,-149.0700
-  Icon: 0,0,000,2,1,"Date: Nov 06, 2026\nTime: 04:36:42 AM CST\nDepth: 12.4 miles"
-  Text: -10,4,1,"2.1"
-End:
-Object: 18.5508,-67.1048
-  Icon: 0,0,000,2,1,"Date: Nov 06, 2026\nTime: 04:20:59 AM CST\nDepth: 11.5 miles"
-  Text: -10,4,1,"2.4"
-End:
-; Events plotted: 179
+; Events plotted: 173
