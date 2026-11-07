@@ -126,7 +126,7 @@ def main():
 
         magnitude = quake["magnitude"]
         magnitude_text = (
-            f"{float(magnitude):.1f}"
+            f"{float(magnitude):.1f} Magnitude"
             if magnitude is not None
             else "?"
         )
@@ -143,7 +143,7 @@ def main():
             else "Not reported"
         )
         depth_detail = (
-            f'{quake["depth_miles"]:.1f} Miles'
+            f'{quake["depth_miles"]:.1f} Miles Deep'
             if quake["depth_miles"] is not None
             else "Unknown"
         )
