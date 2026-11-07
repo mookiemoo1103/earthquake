@@ -126,7 +126,7 @@ def main():
 
         magnitude = quake["magnitude"]
         magnitude_text = (
-            f"{float(magnitude):.1f} Magnitude"
+            f"{float(magnitude):.1f}"
             if magnitude is not None
             else "?"
         )
@@ -138,7 +138,7 @@ def main():
         event_date, event_time = local_datetime(quake["time"])
 
         magnitude_detail = (
-            f"{float(magnitude):.1f}"
+            f"{float(magnitude):.1f} Magnitude"
             if magnitude is not None
             else "Not reported"
         )
