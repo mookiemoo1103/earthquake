@@ -152,8 +152,8 @@ def main():
         hover_text = (
             f"Date: {event_date}\\n"
             f"Time: {event_time}\\n"
-            f"Magnitude: {magnitude_detail}\\n"
-            f"Depth: {depth_detail}"
+            f"{magnitude_detail}\\n"
+            f"{depth_detail}"
         )
 
         lines.extend([
