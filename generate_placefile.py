@@ -42,7 +42,7 @@ def local_datetime(timestamp_ms):
 
     return (
         local.strftime("%b %d, %Y"),
-        local.strftime("%I:%M:%S %p %Z"),
+        local.strftime("%I:%M %p %Z"),
     )
 
 
@@ -108,7 +108,7 @@ def main():
     # Placefile definitions and existing icon assets.
     lines = [
         "; USGS Earthquakes - Past 24 Hours",
-        "; Click an earthquake icon for date, time, and depth in miles.",
+        "; Click an earthquake icon for date, time, magnitude, and depth in miles.",
         "Title: USGS Earthquakes - Last 24 Hours",
         "RefreshSeconds: 10",
         'Font: 1, 12, 1, "Arial"',
@@ -137,19 +137,13 @@ def main():
 
         event_date, event_time = local_datetime(quake["time"])
 
-        depth_text = (
-            f'{quake["depth_miles"]:.1f} miles'
-            if quake["depth_miles"] is not None
-            else "Unknown"
-        )
-
         magnitude_detail = (
             f"{float(magnitude):.1f}"
             if magnitude is not None
             else "Not reported"
         )
         depth_detail = (
-            f'{quake["depth_miles"]:.1f} miles deep'
+            f'{quake["depth_miles"]:.1f} Miles'
             if quake["depth_miles"] is not None
             else "Unknown"
         )
